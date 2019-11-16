@@ -1,7 +1,7 @@
 ---
-title: "Edge Case: Nested and Mixed Lists"
+title: "A Balls and Bins Variation"
 categories:
-- Edge Case
+- Probability Theory
 tags:
 - content
 - css
