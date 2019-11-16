@@ -36,12 +36,8 @@ A couple of comments are in order here:
 Okay, so let's see how this really works. After this, we shall focus on a formal analysis. The code used is available on <a href="https://github.com/pareshnakhe/EGPM" target="_blank" rel="noopener">Github</a>. One of the first problems, with implementing this algorithm is exactly what choice of eta and U to use. As we shall see later, without much prior information, this is essentially a guessing game. As an aside, for computational reasons, I have scaled all features to lie in [0, 1] and hence the loss function is also correspondingly scaled down.
 
 In the first experiment, I am comparing the performance of our algorithm with standard linear regression and the curve below represents the <span style="text-decoration:underline;">mean squared error</span> for different values of step sizes. Given the fact that EGPM starts out with no information at all, I think (<em>for the best value of eta</em>), the algorithm works pretty well! (Of course, I had to try like a hundred times to find the range where it works the best)
-
  
-
 <img class="alignnone size-full wp-image-164" src="/assets/images/linear.png" alt="linear" width="640" height="480" />
-
- 
 
 Out of curiosity, I tried comparing the performance to degree 2 polynomial as well. The interesting part is, that such a transformation results in ~740 features (considering every possible degree 2 monomial). I was assuming that with so many features, EGPM is bound to perform poorly (since the dataset contains only ~1400 instances). Well, surprise, surprise! It still works pretty well!
 
