@@ -39,7 +39,7 @@ In the first experiment, I am comparing the performance of our algorithm with st
 
  
 
-<img class="alignnone size-full wp-image-164" src="https://pareshtheorycs.files.wordpress.com/2018/03/linear.png" alt="linear" width="640" height="480" />
+<img class="alignnone size-full wp-image-164" src="/assets/images/linear.png" alt="linear" width="640" height="480" />
 
  
 
