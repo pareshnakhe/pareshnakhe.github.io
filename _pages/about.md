@@ -1,6 +1,6 @@
 ---
+permalink: /about/
 title: "About"
-layout: about
 ---
 
 This blog is an outlet for my general machine learning / data science thoughts.
