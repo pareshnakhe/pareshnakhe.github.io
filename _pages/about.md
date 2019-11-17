@@ -1,6 +1,8 @@
 ---
 permalink: /about/
 title: "About"
+header:
+  image: /assets/images/header.jpg
 ---
 
 This blog is an outlet for my general machine learning / data science thoughts.
