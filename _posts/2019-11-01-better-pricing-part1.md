@@ -26,7 +26,6 @@ In this context of this post, we shall stick to the following definition:
 Essentially, this pricing policy is a mapping between the expected demand and the price point that should be set.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/ideal_price_vs_dmd.png){: .align-center}
-<!-- <img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/ideal_price_vs_dmd.png" alt="poly" width="586" height="463" /> -->
 
 ## Solution Design
 
@@ -34,15 +33,15 @@ The solution I am presenting here is an abstract proof-of-concept of the general
 
 From here on, we are going to use the Word-of God (WoG) (really!) as a parameter to describe  the solution. By WoG, I mean a floating point number between [0, 1], where the complete interval is mapped to a monotonically increasing demand function. Let’s call this f(x).
 
-<img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/Wog_vs_dmd.png" alt="poly" width="586" height="463" />
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/Wog_vs_dmd.png){: .align-center}
 
 In other words, you use the Word-of-God, and use the above mapping to get the exact demand for the time interval under question. Next, we need to know the frequency distribution of WoG too. We assume this is available too. Let’s call this g(x).
 
-<img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/freq_dist.png" alt="poly" width="586" height="463" />
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/freq_dist.png){: .align-center}
 
 Note that the both the components described above are simply given to you and are not something you can influence. The last component is what we actually want to change. Given the WoG, what is the price point you choose? Let’s say, your current system looks as follows. Let’s call this h(x).
 
-<img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/unoptimized_price_policy.png" alt="poly" width="586" height="463" />
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/unoptimized_price_policy.png){: .align-center}
 
 Notice that we can compute the current total revenue as follows:
 $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
