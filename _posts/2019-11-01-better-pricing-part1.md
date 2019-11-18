@@ -50,25 +50,31 @@ $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 
 To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Let’s see what this implies:
 
-$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05$$. Alternatively, we could write this constraint as:
+$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05$$. 
+
+Alternatively, we could write this constraint as:
+
 $$
 \newcommand{\bm}[1]{\boldsymbol{#1}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\p}{\bm{p}}
-norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}
+\newcommand{\x}{\bm{x}}
+\norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}\\
 $$
 
 This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
 
 ## Optimization Function
 $$
-\mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2
+\mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2\\
 $$
+
 Given this function, we can compute the new optimal price as follows:
+
 $$
 \DeclareMathOperator*{\argmax}{arg\,max}
 \norm{\p}^{new} ~=~ \argmax\limits_{\p} \mathcal{L}(\p)\\[8pt]
-~~~~s.t.~~ \norm{\p^{new}} ~\leq~ 1.05 \cdot \norm{\p^{old}}
+~~~~s.t.~~ \norm{\p^{new}} ~\leq~ 1.05 \cdot \norm{\p^{old}}\\
 $$
 
 ###  Assumptions
