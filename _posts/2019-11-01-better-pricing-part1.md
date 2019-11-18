@@ -1,20 +1,13 @@
 ---
-title: "Exponentiated Gradient for Online Regression"
+title: "Better Pricing: Part 1"
+classes: wide
 categories:
-- Online Learning
+- dynamic pricing
 ---
 
-
-# Better Pricing: Part 1
-
-1. Motivate the problem.
+<!-- 1. Motivate the problem.
 2. Introduce the building blocks
-3. Describe your solution strategy.
-
-## Assumptions
-
-- Changes in prices, do not lead to any change in demand
-- WoG represents our prediction about a certain event. Currently, we are assuming perfect predictions.
+3. Describe your solution strategy. -->
 
 This post is intended to document some of the ideas I have regarding the question of optimal pricing. The approach I take is rather academic and there are no immediate take-aways. I think of my ideas right now more as a a building block towards a more practical pricing solution.
 
@@ -58,9 +51,27 @@ $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Let’s see what this implies:
 
 $$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05$$. Alternatively, we could write this constraint as:
-$$\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+$$
+\usepackage{bm}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\p}{\bm{p}}
 norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}
 $$
 
 This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
+
+## Optimization Function
+$$
+\mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2
+$$
+Given this function, we can compute the new optimal price as follows:
+$$
+\DeclareMathOperator*{\argmax}{arg\,max}
+\norm{\p}^{new} ~=~ \argmax\limits_{\p} \mathcal{L}(\p)\\[8pt]
+~~~~s.t.~~ \norm{\p^{new}} ~\leq~ 1.05 \cdot \norm{\p^{old}}
+$$
+
+###  Assumptions
+
+- Changes in prices, do not lead to any change in demand
+- WoG represents our prediction about a certain event. Currently, we are assuming perfect predictions.
