@@ -25,7 +25,8 @@ In this context of this post, we shall stick to the following definition:
 
 Essentially, this pricing policy is a mapping between the expected demand and the price point that should be set.
 
-<img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/ideal_price_vs_dmd.png" alt="poly" width="586" height="463" />
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/ideal_price_vs_dmd.png){: .align-center}
+<!-- <img class="  wp-image-165 aligncenter" src="/assets/images/better_pricing1/ideal_price_vs_dmd.png" alt="poly" width="586" height="463" /> -->
 
 ## Solution Design
 
@@ -50,7 +51,7 @@ $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 
 To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Let’s see what this implies:
 
-$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05$$. 
+$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 \\$$.
 
 Alternatively, we could write this constraint as:
 
@@ -65,6 +66,7 @@ $$
 This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
 
 ## Optimization Function
+
 $$
 \mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2\\
 $$
