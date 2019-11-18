@@ -110,8 +110,8 @@ author:
   name             : "Paresh Nakhe"
   avatar           : "/assets/images/bio.jpg"
   bio              : "Still Learning..."
-  location         : "Berlin"
-  email            : "paresh.nakhe@gmail.com"
+  location         : "Berlin, Germany"
+  email            : # "paresh.nakhe@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
