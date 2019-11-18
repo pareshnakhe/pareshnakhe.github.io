@@ -52,7 +52,7 @@ To compute this new pricing policy, instead of focusing directly on the revenue,
 
 $$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05$$. Alternatively, we could write this constraint as:
 $$
-\usepackage{bm}
+\newcommand{\bm}[1]{\boldsymbol{#1}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\p}{\bm{p}}
 norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}
