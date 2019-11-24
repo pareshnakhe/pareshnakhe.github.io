@@ -5,10 +5,6 @@ categories:
 - dynamic pricing
 ---
 
-<!-- 1. Motivate the problem.
-2. Introduce the building blocks
-3. Describe your solution strategy. -->
-
 This post is intended to document some of the ideas I have regarding the question of optimal pricing. The approach I take is rather academic and there are no immediate take-aways. I think of my ideas right now more as a a building block towards a more practical pricing solution.
 
 ## Problem Set-up
@@ -48,7 +44,7 @@ $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 
 ### Constraints
 
-To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Let’s see what this implies:
+To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Say, for example, that the percentage increase in ATP should be at most 5%. This means:
 
 $$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 \\$$.
 
@@ -62,21 +58,7 @@ $$
 \norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}\\
 $$
 
-This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
-
-## Optimization Function
-
-$$
-\mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2\\
-$$
-
-Given this function, we can compute the new optimal price as follows:
-
-$$
-\DeclareMathOperator*{\argmax}{arg\,max}
-\norm{\p}^{new} ~=~ \argmax\limits_{\p} \mathcal{L}(\p)\\[8pt]
-~~~~s.t.~~ \norm{\p^{new}} ~\leq~ 1.05 \cdot \norm{\p^{old}}\\
-$$
+where $\p^{new}$ and $\p^{old}$ denote the vector of new and old prices respectively and $\norm{\cdot}$ denotes the $\ell_1$ norm unless specified otherwise. This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
 
 ###  Assumptions
 
