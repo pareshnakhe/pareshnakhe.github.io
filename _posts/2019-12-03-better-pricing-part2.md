@@ -28,14 +28,29 @@ $$
 For purposes of illustration, let's consider a simplified (discrete) version of the problem, where WoG can be either 0 or 1 (representing two different demand scenarios).
 
 <!-- add the two toy pics here -->
+<figure class="half">
+    <a href="/assets/images/better_pricing2/toy1.png"><img src="/assets/images/better_pricing2/toy1.png"></a>
+    <a href="/assets/images/better_pricing2/toy2.png"><img src="/assets/images/better_pricing2/toy2.png"></a>
+    <figcaption>Caption describing these two images.</figcaption>
+</figure>
 
 Let's first visualize the objective function and the solution space. Darker shades of green correspond to smaller numbers.
 
 <!-- opt_prices_temp -->
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing2/opt_prices_tmp.png){: .align-center}
 
-Luckily for us, the objective function is quadratic with linear constraints. This will help with faster computation. The code snippet used to find *optimal prices* is as follows:
+Luckily for us, the objective function is quadratic with linear constraints. This will help us with faster computation. The code snippet used to find *optimal prices* is as follows:
 
 <script src="https://gist.github.com/pareshnakhe/05443f35faa69b99fe19c029794b138c.js"></script>
+
+Let's see what the new prices are:
+
+<!-- add the 2 toy pics here: opt_prices.png, price_change.png -->
+<figure class="half">
+    <a href="/assets/images/better_pricing2/opt_prices.png"><img src="/assets/images/better_pricing2/opt_prices.png"></a>
+    <a href="/assets/images/better_pricing2/price_change.png"><img src="/assets/images/better_pricing2/price_change.png"></a>
+    <figcaption>Caption describing these two images.</figcaption>
+</figure>
 
 <!-- Present solution for following toy examples:
 
