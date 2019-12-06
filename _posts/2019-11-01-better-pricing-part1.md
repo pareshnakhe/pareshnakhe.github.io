@@ -46,7 +46,7 @@ $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 
 To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Say, for example, that the percentage increase in ATP should be at most 5%. This means:
 
-$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 \\$$.
+$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 $$.
 
 Alternatively, we could write this constraint as:
 
@@ -55,12 +55,12 @@ $$
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\p}{\bm{p}}
 \newcommand{\x}{\bm{x}}
-\norm{\p^{new}} \leq 1.05 \cdot \norm{\p^{old}}\\
+\norm{\p^{new}} ~\leq~ 1.05 \cdot \norm{\p^{old}}\\
 $$
 
-where $\p^{new}$ and $\p^{old}$ denote the vector of new and old prices respectively and $\norm{\cdot}$ denotes the $\ell_1$ norm unless specified otherwise. This constraint ensures that sum of all prices does not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularisation term.
+where $\p^{new}$ and $\p^{old}$ denote the vector of new and old prices respectively and $\norm{\cdot}$ denotes the $\ell_1$ norm unless specified otherwise. This constraint ensures that sum of all prices do not increase by more than 5%. But there is nothing to stop the optimization algorithm from decreasing the prices for lower demand cases (alternatively, when WoG is close to 0) to 0 and that of increasing the price for higher demand cases to p_max. What we need is a regularization term.
 
-###  Assumptions
+In the next post, we shall look into what this regularization term should be, and what is the objective function we optimize. Before that a couple of comments:
 
-- Changes in prices, do not lead to any change in demand
-- WoG represents our prediction about a certain event. Currently, we are assuming perfect predictions.
+1. Note that in the current model, changes in price (for a given WoG value) has no impact whatsoever on the corresponding demand. In one of the subsequent posts, we shall address this issue.
+2. WoG is indeed an abstract concept. Think of it as being our prediction about a certain event (which is always accurate!).
