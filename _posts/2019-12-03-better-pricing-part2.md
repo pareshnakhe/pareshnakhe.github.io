@@ -1,8 +1,17 @@
-# Better Pricing: Part 2
+---
+title: "Better Pricing: Part 2"
+classes: wide
+categories:
+- dynamic pricing
+---
 
 This post is a continuation of the previous post in the series "Better Pricing". Last time, I introduced the basic set-up of the problem at hand and the constraint we shall be using. And the objective? Maximizing revenue of course! But we shall go about it in a slightly different way by maximizing the following function:
 
 $$
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\p}{\bm{p}}
+\newcommand{\x}{\bm{x}}
 \mathcal{L}(\p) ~=~ \p \cdot \x ~-~ \lambda \norm{\p - \p^{old}}^2\\
 $$
 
