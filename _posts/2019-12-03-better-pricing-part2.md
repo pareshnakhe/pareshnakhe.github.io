@@ -31,7 +31,7 @@ For purposes of illustration, let's consider a simplified (discrete) version of 
 <figure class="half">
     <a href="/assets/images/better_pricing2/toy1.png"><img src="/assets/images/better_pricing2/toy1.png"></a>
     <a href="/assets/images/better_pricing2/toy2.png"><img src="/assets/images/better_pricing2/toy2.png"></a>
-    <figcaption>Caption describing these two images.</figcaption>
+    <figcaption>Demand and Prices for different WoG scenarios</figcaption>
 </figure>
 
 Let's first visualize the objective function and the solution space. Darker shades of green correspond to smaller numbers.
@@ -45,12 +45,25 @@ Luckily for us, the objective function is quadratic with linear constraints. Thi
 
 Let's see what the new prices are:
 
-<!-- add the 2 toy pics here: opt_prices.png, price_change.png -->
 <figure class="half">
     <a href="/assets/images/better_pricing2/opt_prices.png"><img src="/assets/images/better_pricing2/opt_prices.png"></a>
     <a href="/assets/images/better_pricing2/price_change.png"><img src="/assets/images/better_pricing2/price_change.png"></a>
-    <figcaption>Caption describing these two images.</figcaption>
+    <figcaption>Prices after Optimization</figcaption>
 </figure>
+
+This seems to makes sense: for the low demand scenario (WoG=0), prices have decreased whereas for the high demand scenario (WoG=1) prices have increased. I should point out a couple of things at this point:
+1. The optimal hyperparameter $\lambda$, responsible for penalizing changes in prices, in our basic model, cannot be determined in a methodical way. For this example, I manually tried different values to see which ones make sense.
+2. Our model does not assume changes in demand on changes in prices. But since the price changes are expected to be rather small, I think the assumption is justified.
+
+Let's try out a pricing policy with 10 unique price points and how the prices change. The only thing we need to change in the code above is p_old and x_old:
+```
+p_old = np.array([0.4]*5 + [0.6]*5)
+x_old = np.array(np.linspace(0.2, 0.8, 10))
+```
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing2/price_change_10.png){: .align-center}
+
+That's all for now folks. Hope you found the idea interesting!
 
 <!-- Present solution for following toy examples:
 
