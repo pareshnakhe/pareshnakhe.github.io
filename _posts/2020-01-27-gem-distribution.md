@@ -65,9 +65,9 @@ and set $c_2 = (1-u_1) \cdot u_2$. Similarly,
 
 $$
 u_3 ~\sim~ Beta(\alpha_3, \alpha_4)
-
 $$
-and $c_3 = (1-u_1) \cdot (1-u_2) u_3$. Finally, $c_4$ is simply $c_4 = 1 - (c_1 + c_2 + c_3)$.
+
+and $c_3 = (1-u_1) \cdot (1-u_2) u_3$. Finally, $c_4 = 1 - (c_1 + c_2 + c_3)$.
 
 Personally, I find it quite amazing that we can draw samples from a seemingly complicated distribution by recursively using a much simpler Beta distribution. Now, the even more interesting aspect of this procedure is that, *if* we had access to an infinite number of parameters $ (\alpha_1, \alpha_2, \cdots)$ we could have run the procedure indefinitely, i.e.
 
