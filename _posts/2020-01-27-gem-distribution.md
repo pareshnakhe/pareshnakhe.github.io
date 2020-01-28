@@ -92,3 +92,5 @@ u_1, u_2, \cdots  ~\sim~ Beta\left(1, \alpha \right)
 $$
 
 used to compute the actual vector using the stick breaking approach from above. $\mathbf{c} = (c_1 = u_1, c_2 = (1-u_1)u_2, \cdots )$. The distribution so obtained is the **$GEM(\alpha)$** distribution, where $\alpha$ is called the *concentration parameter*.
+
+Oh, I almost forgot. GEM distribution after three mathematicians, Griffith, Engen and McCloskey. If you'd like to see GEM distribution in action, you can find some toy code [here](https://github.com/pareshnakhe/SundayAfternoonProjects/blob/master/Dirichlet_process/gem.py) and [here](https://github.com/pareshnakhe/SundayAfternoonProjects/blob/master/Dirichlet_process/generative_model_gem.py). In the next post, I will talk about the Chinese restaurant process and how to use it for inference.
