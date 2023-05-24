@@ -40,13 +40,14 @@ Note that the both the components described above are simply given to you and ar
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/better_pricing1/unoptimized_price_policy.png){: .align-center}
 
 Notice that we can compute the current total revenue as follows:
+
 $$ \int\limits_{0}^{1} f(x)g(x)h(x) dx $$
 
 ### Constraints
 
 To compute this new pricing policy, instead of focusing directly on the revenue, we shall use percentage change in ATP as constraint. Say, for example, that the percentage increase in ATP should be at most 5%. This means:
 
-$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 $$.
+$$\frac{\sum_i (p_i^{new}- p_i^{old})}{\sum_i p_i^{old}} ~\leq~ 0.05 $$
 
 Alternatively, we could write this constraint as:
 
