@@ -17,8 +17,8 @@ The first one I am going to be looking at is: <em><span style="text-decoration:u
 
 Dataset: For purposes of experimentation, I am using house pricing dataset from <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques" target="_blank" rel="noopener">Kaggle</a>. The original dataset has 80 features which I am trimming to 36 (essentially just choosing the numeric data). Out-of-the-box linear regression still works pretty well with the R2 value of around 0.85. Anyhow, the point of the experiment is to see how close our online algorithm comes to the one using batch data. So we're good. As an aside, I should point out that we are dealing with linear regression here, therefore the hypothesis space is the <span style="color:#993300;">set of all linear functions</span>.
 
-So, the general idea is as follows: In each round, we choose a weight vector that serves as the hypothesis of the learner and based on this hypothesis the learner predicts a value $latex \hat{y}_t = w_t \cdot x_t$. Based on this prediction, the learner incurs a loss
-<p style="text-align:center;">$latex L(y_t, \hat{y}_t) = ( y_t - \hat{y}_t )^2$</p>
+So, the general idea is as follows: In each round, we choose a weight vector that serves as the hypothesis of the learner and based on this hypothesis the learner predicts a value $\hat{y}_t = w_t \cdot x_t$. Based on this prediction, the learner incurs a loss
+<p style="text-align:center;">$L(y_t, \hat{y}_t) = ( y_t - \hat{y}_t )^2$</p>
 The goal of the learner is to update the hypothesis in an online manner such that the cumulative loss incurred is minimized. Of course, one may ask what's so special about squared loss, and honestly, I am myself not sure, except that it allows one to give good learning bounds.
 
 <img class="alignnone size-full wp-image-163" src="https://pareshtheorycs.files.wordpress.com/2018/03/egpm1.png" alt="EGPM" width="532" height="510" />
