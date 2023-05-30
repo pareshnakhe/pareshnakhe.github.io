@@ -20,7 +20,7 @@ A ~=~ \begin{bmatrix}
 \end{bmatrix}
 $$
 
-<img class="wp-image-165 aligncenter" src="/assets/images/eigen_refresher/transformation_example.png" alt="poly" width="586" height="463" />
+<img class="wp-image-165 aligncenter" src="/assets/images/eigen_refresher/transformation_example.png" alt="poly"/>
 
 Multiplying this matrix with any point $\mathbf{x} = (x_1, x_2)$ gives us the position of this point in the space defined by the transformation A. Algebraically, the point $\mathbf{x}$ is mapped to $(3x_1 + x_2, 2x_2)$.
 
@@ -39,7 +39,7 @@ x_2
 \end{bmatrix}
 $$
 
-Note, how the transformation affects the vector $mathbf{x} = (1, 1)$, shown by red arrows.
+Note, how the transformation affects the vector $\mathbf{x} = (1, 1)$, shown by red arrows.
 
 ## Geometric Interpretation of Eigenvectors and Eigenvalues 
 
