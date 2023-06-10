@@ -4,8 +4,8 @@ main:
     url: /jupyter/
   - title: "About"
     url: /about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Home"
+    url: /
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

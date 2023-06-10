@@ -1,7 +1,7 @@
 ---
 title: About
 classes: wide
-permanlink: /about/
+permalink: /about/
 header:
   image: /assets/images/header.jpg
 ---

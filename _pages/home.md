@@ -1,7 +1,7 @@
 ---
 title: Home
 classes: wide
-permanlink: /
+permalink: /
 layout: splash
 classes: wide
 header:
