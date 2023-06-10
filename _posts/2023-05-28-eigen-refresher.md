@@ -70,7 +70,8 @@ $$
 
 When I first learned about eigenvectors I had a hard time understanding the significance and the need to introduce such abstract concepts. I won't claim I understand it completely now, but I do have a new appreciation for how *cool* these ideas actually are. This post is a way to share some of that understanding.
 
-*So what are eigenvectors really?** They are vectors characteristic to a given matrix (transformation) and together they *define* the transformation space just like X and Y axes in a 2D coordinate system do.{: .notice--info}
+*So what are eigenvectors really?** They are vectors characteristic to a given matrix (transformation) and together they *define* the transformation space just like X and Y axes in a 2D coordinate system do.
+{: .notice--info}
 
 ## What to do with Eigenvectors?
 
