@@ -297,6 +297,15 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # jupyter
+  - scope:
+      path: ""
+      type: jupyter
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
   # _docs
   - scope:
       path: ""
@@ -313,6 +322,9 @@ defaults:
 
 # Collections
 collections:
+  jupyter:
+    output: true
+    permalink: /:collection/:path/
   random_thoughts:
     output: true
     permalink: /:collection/:path/
