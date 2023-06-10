@@ -1,8 +1,6 @@
 ---
 title: "Slow Working"
 classes: wide
-categories:
-- random thoughts
 ---
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/slow_working/a_strange_life.jpg){: .align-center}

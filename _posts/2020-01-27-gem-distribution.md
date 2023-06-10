@@ -1,9 +1,6 @@
 ---
 title: "GEM Distribution"
 classes: wide
-categories:
-- Mixture models
-- Bayesian nonparametric models
 ---
 
 In one of the introductory lectures on machine learning (a long time ago) I learnt some basics about mixture models, EM algorithm; the standard stuff. I was always curious about learning the nitty-gritty of the workings and the underlying concepts. Finally, (after many years!) I had the time to dig in a bit deep. Specifically, I focused my energies on the *Bayesian nonparameteric models*. This series of posts is an attempt to document the most important learnings.

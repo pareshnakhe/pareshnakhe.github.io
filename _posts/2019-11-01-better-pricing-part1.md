@@ -1,8 +1,5 @@
 ---
 title: "Better Pricing: Part 1"
-classes: wide
-categories:
-- dynamic pricing
 ---
 
 This post is intended to document some of the ideas I have regarding the question of optimal pricing. The approach I take is rather academic and there are no immediate take-aways. I think of my ideas right now more as a a building block towards a more practical pricing solution.

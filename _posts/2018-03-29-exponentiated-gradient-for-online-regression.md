@@ -1,13 +1,5 @@
 ---
 title: "Exponentiated Gradient for Online Regression"
-categories:
-- Online Learning
-tags:
-- content
-- css
-- edge case
-- lists
-- markup
 ---
 
 

@@ -1,8 +1,6 @@
 ---
 title: "The Eigen* Refresher"
 classes: wide
-categories:
-- math
 ---
 
 **Disclaimer**: This post assumes a basic familiarity with linear algebra topics.

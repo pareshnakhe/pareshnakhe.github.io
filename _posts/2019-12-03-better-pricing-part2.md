@@ -1,8 +1,5 @@
 ---
 title: "Better Pricing: Part 2"
-classes: wide
-categories:
-- dynamic pricing
 ---
 
 This post is a continuation of the previous post in the series "Better Pricing". Last time, I introduced the basic set-up of the problem at hand and the constraint we shall be using. And the objective? Maximizing revenue of course! But we shall go about it in a slightly different way by maximizing the following function:

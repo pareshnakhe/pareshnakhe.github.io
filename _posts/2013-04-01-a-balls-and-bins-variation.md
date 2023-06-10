@@ -1,13 +1,5 @@
 ---
 title: "A Balls and Bins Variation"
-categories:
-- Probability Theory
-tags:
-- content
-- css
-- edge case
-- lists
-- markup
 ---
 
 In this post, I am looking at a bins and balls variation of the classic problem. The analysis may seem high-school level
