@@ -1,6 +1,7 @@
 ---
-title: "About"
+title: About
 classes: wide
+permanlink: /
 header:
   image: /assets/images/header.jpg
 ---
