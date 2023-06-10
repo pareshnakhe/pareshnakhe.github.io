@@ -2,7 +2,7 @@
 permalink: /about/
 title: "About"
 classes: wide
-layout: home
+layout: single
 header:
   image: /assets/images/header.jpg
 ---
