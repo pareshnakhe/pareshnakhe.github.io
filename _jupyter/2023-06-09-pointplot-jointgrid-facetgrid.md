@@ -55,7 +55,7 @@ plt.show()
 ```
 
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_3_0.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/point-joint-facet/output_2_0.png){: .align-center}
     
 
 
@@ -91,7 +91,7 @@ g.fig.suptitle(f"Example", fontsize=17)
 
 
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_5_1.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/point-joint-facet/output_4_1.png){: .align-center}
     
 
 
@@ -114,6 +114,6 @@ g.set_xticklabels(fontsize=9)
 g.add_legend()
 ```
     
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_7_1.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/point-joint-facet/output_7_1.png){: .align-center}
     
 
