@@ -105,8 +105,8 @@ analytics:
 # Site Author
 author:
   name             : "Paresh Nakhe"
-  avatar           : "/assets/images/bio.jpg"
-  bio              : "Still Learning..."
+  avatar           : "/assets/images/blog_platform_images/profile_pic.jpeg"
+  bio              : "Making Value from Data"
   location         : "Berlin, Germany"
   email            : "paresh.nakhe@gmail.com"
   links:
