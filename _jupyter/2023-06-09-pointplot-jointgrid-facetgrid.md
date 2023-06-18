@@ -55,8 +55,7 @@ plt.show()
 ```
 
 
-    
-![png](output_3_0.png)
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_3_0.png){: .align-center}
     
 
 
@@ -91,8 +90,8 @@ g.fig.suptitle(f"Example", fontsize=17)
 
 
 
-    
-![png](output_5_1.png)
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_5_1.png){: .align-center}
     
 
 
@@ -115,6 +114,6 @@ g.set_xticklabels(fontsize=9)
 g.add_legend()
 ```
     
-![png](output_7_1.png)
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_7_1.png){: .align-center}
     
 
