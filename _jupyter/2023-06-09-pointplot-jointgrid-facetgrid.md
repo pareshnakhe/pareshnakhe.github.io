@@ -1,7 +1,10 @@
 ---
-title: "Test"
+title: "Seaborn Usage: Pointplot, JointGrid and FacetGrid"
 classes: wide
 ---
+
+This notebook demonstrates *typical* usage of 3 different classes of plots that I have found extremely handy in my day-to-day work.
+
 
 ```python
 from sklearn import datasets
@@ -14,6 +17,13 @@ import matplotlib.pyplot as plt
 sns.__version__
 ```
 
+
+
+
+    '0.12.2'
+
+
+
 ## [Pointplot](https://seaborn.pydata.org/generated/seaborn.pointplot.html#seaborn.pointplot)
 
 
@@ -21,7 +31,7 @@ sns.__version__
 df = sns.load_dataset("penguins")
 
 """
-This is a super simple function to demonstrate usage
+Just a super simple function to demonstrate usage
 """
 def get_mean(vec):
     return np.median(vec)
@@ -45,12 +55,12 @@ plt.show()
 ```
 
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_2_0.png){: .align-center}
+    
+![png](output_3_0.png)
+    
 
 
 ## [JointGrid](https://seaborn.pydata.org/generated/seaborn.JointGrid.html)
-
-Also see: https://www.youtube.com/watch?v=t3G078DWXBM
 
 
 ```python
@@ -82,7 +92,7 @@ g.fig.suptitle(f"Example", fontsize=17)
 
 
     
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_4_1.png){: .align-center}
+![png](output_5_1.png)
     
 
 
@@ -90,19 +100,6 @@ g.fig.suptitle(f"Example", fontsize=17)
 
 
 ```python
-sns.__version__
-```
-
-
-
-
-    '0.12.2'
-
-
-
-
-```python
-# help(sns.FacetGrid)
 g = sns.FacetGrid(
     df, 
     col='origin', ylim=(50, 250), hue='cylinders', sharex=False,
@@ -117,17 +114,7 @@ g.set_axis_labels(xlabel='weight', ylabel = 'Horsepower', fontsize=16)
 g.set_xticklabels(fontsize=9)
 g.add_legend()
 ```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x142ee7f70>
-
-
-
-
-  
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/test/output_7_1.png){: .align-center}
     
+![png](output_7_1.png)
     
 
