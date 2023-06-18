@@ -6,9 +6,7 @@ header:
   image: /assets/images/header.jpg
 ---
 
-This blog is an outlet for my machine learning, data science and for that matter anything that I find interesting enough to write about.
+This blog is an outlet for almost anything I find interesting enough to write about. Mostly, that is about machine learning algorithms, general topics in data science and software engineering. At work, I develop ML solutions, engineer data products and make data tell stories (with the backdrop of beautiful plots of course!). Every so often, I come across things I find elegant, beautiful or just plain old useful. My intention is to use this blog to document and share these small and big wonderful things.
 
-I am currently working as a data scientist at Zalando in Berlin. My interests include among other things sequential machine learning, revenue optimizing pricing algorithms and more recently Bayesian modeling.
+If you are considering hiring me, you can find with my CV here.
 
-I find myself often flirting with Tensor flow framework, and hope to write
-something on that as well.
