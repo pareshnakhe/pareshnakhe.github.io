@@ -4,4 +4,5 @@ classes: wide
 permalink: /cv/
 ---
 
-![cv](/assets/pdf/CV-Nakhe.pdf)
+<!-- https://belovanna.github.io/website/update/linking-to-pdf-in-jekyll/ -->
+<embed src="https://pareshnakhe.github.io/assets/pdf/CV-Nakhe.pdf" type="application/pdf"/>
