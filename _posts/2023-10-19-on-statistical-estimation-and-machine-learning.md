@@ -3,9 +3,11 @@ title: "On Statistical Estimation and Machine Learning"
 classes: wide
 ---
 
+<img class="wp-image-165 aligncenter" src="/assets/images/statistical_estimation_ml/title_image.jpg" alt="poly" width="586" height="463" />
+
 I am an ML practitioner without much formal training in either ML or statistical techniques, although I can find my way around most ML-related topics. At work, I have colleagues focusing on econometric problems using ideas that are seemingly from the ML realm. For example, I didn’t know how linear regression could be repurposed to solve these problems. I also found it strange that we don’t speak the same language (after all ML origins can be traced back to ideas from statistical estimation); for example, these colleagues obsess over confidence intervals whereas I hardly ever worked on problems with this requirement. This post is based on some of my musings about how the two fields are connected; what are the differences? and why?
 
-Let’s start with a simple statistical estimation problem of estimating the effectiveness of a medicine in a randomized controlled trial. The problem is as follows: We create two groups of people suffering from the same disease. One group (control, D_i =0) receives placebo tablets while the other group (treatment, D_i=1) receives the real medicine to be tested. What we want to know is if the medicine indeed contributes to recovery. At the end of the test, we collect data capturing the level of recovery, Y_i. For simplicity, say Y_i = 0 or 1. The sample means in each of the groups are:
+Let’s start with a simple statistical estimation problem of estimating the effectiveness of a medicine in a randomized controlled trial. The problem is as follows: We create two groups of people suffering from the same disease. One group (control, $D_i = 0$) receives placebo tablets while the other group (treatment, $D_i=1$) receives the real medicine to be tested. What we want to know is if the medicine indeed contributes to recovery. At the end of the test, we collect data capturing the level of recovery, $Y_i$. For simplicity, say $Y_i = 0$ or 1. The sample means in each of the groups are:
 
 $$
 Y_0 ~=~ \frac{1}{n_0} \sum\limits_{i; D_i = 0} Y_i \\
@@ -73,7 +75,7 @@ For (typical) machine learning problems:
 
 - accuracy on the test set is the key metric (although concepts like cross-validation are needed)
 
-- the estimands are the actual predictions; g(x_0), … g(x_n). g is then judged based on some aggregation of these individual estimates.
+- the estimands are the actual predictions; $g(x_0), \cdots ,g(x_n)$. $g$ is then judged based on some aggregation of these individual estimates.
 
 - a rigorous and calibrated confidence interval is often not available. Even the accuracy metric is usually reported without CIs in the ML community.
 
