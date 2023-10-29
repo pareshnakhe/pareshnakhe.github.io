@@ -12,8 +12,7 @@ I am an ML practitioner without much formal training in either ML or statistical
 Let’s start with a simple statistical estimation problem of estimating the effectiveness of a medicine in a randomized controlled trial. The problem is as follows: We create two groups of people suffering from the same disease. One group (control, $D_i = 0$) receives placebo tablets while the other group (treatment, $D_i=1$) receives the real medicine to be tested. What we want to know is if the medicine indeed contributes to recovery. At the end of the test, we collect data capturing the level of recovery, $Y_i$. For simplicity, say $Y_i = 0$ or 1. The sample means in each of the groups are:
 
 $$
-Y_0 ~=~ \frac{1}{n_0} \sum\limits_{i; D_i = 0} Y_i \\
-Y_1 ~=~ \frac{1}{n_1} \sum\limits_{i; D_i = 1} Y_i \\
+Y_0 ~=~ \frac{1}{n_0} \sum\limits_{i; D_i = 0} Y_i \hspace{2cm} Y_1 ~=~ \frac{1}{n_1} \sum\limits_{i; D_i = 1} Y_i
 $$
 
 Here $n_0$ and $n_1$ are the number of people in the control and treatment groups respectively. One way to estimate the effectiveness of the said medicine is to measure the effect using the so-called difference estimator.
