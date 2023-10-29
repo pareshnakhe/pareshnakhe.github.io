@@ -3,9 +3,9 @@ title: "On Statistical Estimation and Machine Learning"
 classes: wide
 ---
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/statistical_estimation_ml/title_image.jpg){: .align-center}
-
 > My thoughts on the commonalities between these two disciplines and how diverging motivations have shaped their vastly different perspectives.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/statistical_estimation_ml/title_image.jpg){: .align-center}
 
 I am an ML practitioner without much formal training in either ML or statistical techniques, although I can find my way around most ML-related topics. At work, I have colleagues focusing on econometric problems using ideas that are seemingly from the ML realm. For example, I didn’t know how linear regression could be repurposed to solve these problems. I also found it strange that we don’t speak the same language (after all ML origins can be traced back to ideas from statistical estimation); for example, these colleagues obsess over confidence intervals whereas I hardly ever worked on problems with this requirement. This post is based on some of my musings about how the two fields are connected; what are the differences? and why?
 
