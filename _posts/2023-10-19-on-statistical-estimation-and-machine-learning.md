@@ -4,8 +4,7 @@ classes: wide
 ---
 
 <p align="center">
-  <img class="wp-image-165 aligncenter" src="/assets/images/statistical_estimation_ml/title_image.jpg" alt="poly" width="586" height="463" />
-  Photo by Christopher Paul High on Unsplash
+  <img src="/assets/images/statistical_estimation_ml/title_image.jpg" width="586" height="463" />
 </p>
 
 > My thoughts on the commonalities between these two disciplines and how diverging motivations have shaped their vastly different perspectives.
