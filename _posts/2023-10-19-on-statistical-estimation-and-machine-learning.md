@@ -7,12 +7,7 @@ classes: wide
 
 <!-- ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/statistical_estimation_ml/title_image.jpg){: .align-center} -->
 
-```html
-<figure>
-  <img src="/assets/images/statistical_estimation_ml/title_image.jpg" width="586" height="463" alt="this is a placeholder image">
-  <figcaption>This is a figure caption.</figcaption>
-</figure>
-```
+{% include figure image_path="/assets/images/statistical_estimation_ml/title_image.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
 I am an ML practitioner without much formal training in either ML or statistical techniques, although I can find my way around most ML-related topics. At work, I have colleagues focusing on econometric problems using ideas that are seemingly from the ML realm. For example, I didn’t know how linear regression could be repurposed to solve these problems. I also found it strange that we don’t speak the same language (after all ML origins can be traced back to ideas from statistical estimation); for example, these colleagues obsess over confidence intervals whereas I hardly ever worked on problems with this requirement. This post is based on some of my musings about how the two fields are connected; what are the differences? and why?
 
