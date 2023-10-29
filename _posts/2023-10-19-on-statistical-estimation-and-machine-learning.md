@@ -3,9 +3,7 @@ title: "On Statistical Estimation and Machine Learning"
 classes: wide
 ---
 
-<p align="center">
-  <img src="/assets/images/statistical_estimation_ml/title_image.jpg" width="586" height="463" />
-</p>
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/statistical_estimation_ml/title_image.jpg){: .align-center}
 
 > My thoughts on the commonalities between these two disciplines and how diverging motivations have shaped their vastly different perspectives.
 
