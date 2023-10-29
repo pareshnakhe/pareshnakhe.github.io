@@ -41,6 +41,42 @@ $$
 Using some ML algorithm, we can produce an estimator $\mathbf{g}$ by training the model on D. Essentially, here $\mathbf{g}$ is a random variable and although eventually we are interested in the accuracy, it is closely related to the bias and variance of $\mathbf{g}$.
 
 $$
-Bias(g(\mathbf{x}_0)) = \left(\mathbb{E}_{\mathcal{D}} \left[g(\mathbf{x}_0 \mid \mathcal{D} \right] - h(\mathbf{x}_0) \right)\\
+Bias(g(\mathbf{x}_0)) = \left(\mathbb{E}_{\mathcal{D}} \left[g(\mathbf{x}_0 \mid \mathcal{D} \right] - h(\mathbf{x}_0) \right)\\[5pt]
 Var(g(\mathbf{x}_0)) = \mathbb{E}_{\mathcal{D}}\left[ \left(g(\mathbf{x}_0 \mid \mathcal{D}) - \mathbb{E}_{\mathcal{D}} \left[ g(\mathbf{x}_0 \mid \mathcal{D} )\right] \right)^2 \right]
 $$
+
+Note how the bias of $\mathbf{g}$ is defined using the expected value of $\mathbf{g}(x)$ over all possible training sets D. And what does the variance exactly mean here?
+
+Suppose we take 1000 samples of size N and for each sample, $D_i$, train a model $\mathbf{g}(D_i)$; then the variance of the model (i.e. the rule used to derive $g(D_i)$ from $D_i$) is:
+
+$$
+Var(f'(x_0)) = \frac{1}{1000} \cdot \sum\limits_i \left[ (g(x_0 \mid D_i) - \bar{g}(x_0))^2\right]
+$$
+
+We say $\mathbf{g}$ has a high variance if different sets of training data (chosen from the same population) give drastically different predictions. In ML terminology, this happens if we overfit the training data leading to high generalization error. Analogously, if the model is not flexible enough to capture the complexity of the data (read, high bias) the accuracy is going to suffer.
+
+To complete the chain of thoughts, the goodness of an estimator, for both kinds of problems, is/can be assessed in very similar ways. The difference I see however is that the stats community is way more rigorous in giving provable guarantees, either by making assumptions on the distribution of the data and/or on the form of g. In contrast, in the ML community, the questions about the bias and variance of a forecaster are not addressed with the same rigour. Honestly, I am not sure why.
+
+## More Points of Comparison
+
+For statistical estimation problems:
+
+- bias and variance of estimators are key metrics
+
+- the estimands are a few specific entities; e.g. average treatment effect or population mean
+
+- as the estimand is a primary entity of interest, it always comes with confidence intervals.
+
+- assumptions on the data-generating process (DGP) are made. The estimands are parameters of this process. If DGP indeed corresponds to reality, high-accuracy forecasts can also be made.
+
+For (typical) machine learning problems:
+
+- accuracy on the test set is the key metric (although concepts like cross-validation are needed)
+
+- the estimands are the actual predictions; g(x_0), … g(x_n). g is then judged based on some aggregation of these individual estimates.
+
+- a rigorous and calibrated confidence interval is often not available. Even the accuracy metric is usually reported without CIs in the ML community.
+
+- For most real-world learning problems, the space of DGP is too large and complex to be modelled. A lot of algorithms instead focus on learning the decision boundary.
+
+That’s it, folks. Hope you enjoyed it as well
