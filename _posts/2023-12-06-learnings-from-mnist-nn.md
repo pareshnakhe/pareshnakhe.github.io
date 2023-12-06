@@ -3,9 +3,9 @@ title: "Learnings from coding MNIST NN from Scratch"
 classes: wide
 ---
 
-{% include figure image_path="/assets/images/mnist_scratch/mika_unsplash.jpg" alt="titleimage" caption="Photo by <a href="https://unsplash.com/@mbaumi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mika Baumeister</a> on <a href="https://unsplash.com/photos/white-printing-paper-with-numbers-Wpnoqo2plFA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>" %}
+{% include figure image_path="/assets/images/mnist_scratch/mika_unsplash.jpg" alt="titleimage" caption="Photo by Mika Baumeister on Unsplash" %}
 
-I recently decided to implement a neural network to classify handwritten digits using the MNIST dataset. Not with the goal of climbing the leaderboard in some data science competition but to look closely at the building blocks of the AI systems we are all surrounded by. I wanted to work through the details once myself to get a sense of some of the challenges ML scientists might be facing. 
+I recenly decided to implement a neural network to classify handwritten digits using the MNIST dataset. Not with the goal of climbing the leaderboard in some data science competition but to look closely at the building blocks of the AI systems we are all surrounded by. I wanted to work through the details once myself to get a sense of some of the challenges ML scientists might be facing. 
 
 I am also writing this for my future self to continue building on the modest beginnings I have undertaken here. Without further ado, here are my main learnings:
 
