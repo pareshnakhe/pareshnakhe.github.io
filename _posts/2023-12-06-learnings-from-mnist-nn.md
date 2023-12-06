@@ -1,5 +1,5 @@
 ---
-title: "Coding MNIST NN from Scratch: Some Learnings"
+title: "Learnings from coding MNIST NN from Scratch"
 classes: wide
 ---
 
