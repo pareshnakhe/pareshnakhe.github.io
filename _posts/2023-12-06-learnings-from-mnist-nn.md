@@ -1,5 +1,5 @@
 ---
-title: "Learnings from Implementing a Neural Network from Scratch"
+title: "Implementing a Neural Network from Scratch: Some Learnings"
 classes: wide
 ---
 
